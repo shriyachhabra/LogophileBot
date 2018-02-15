@@ -26,14 +26,6 @@ def post_mssg():
                 handle_mssg(recipient_id,msg)
     return "message received"
 
-def handle_mssg(rec_id,msg):
-    txt=msg.split(' ',1)
-    response_text=''
-    if(txt[0]=="hey"):
-        response_text="hi"
-        send_message(rec_id,response_text)
-
-    return "handled"
 
 @app.route('/',methods=['GET'])
 def get_mssg():
@@ -42,6 +34,14 @@ def get_mssg():
     token_sent = request.args.get("hub.verify_token")
     return verify_fb_token(token_sent)
 
+def handle_mssg(rec_id,msg):
+    txt=msg.split(' ',1)
+    response_text=''
+    if(txt[0]=="hey"):
+        response_text="hi"
+        send_message(rec_id,response_text)
+
+    return "handled"
 
 
 def verify_fb_token(token_sent):
