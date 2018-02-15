@@ -12,11 +12,10 @@ def word_exists(word):
  code="code {}\n".format(r.status_code)
  print(code)
 
- if(code==404):
+ if(code=='404'):
      return "The word does not exist"
 
- return """Great!
-          The word exists.
+ return """Great!The word exists.
           You know the language well."""
 # print("text \n" + r.text)
 # print("json \n" + json.dumps(r.json()))
