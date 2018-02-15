@@ -1,0 +1,4 @@
+pymessenger
+flask
+requests
+gunicorn
