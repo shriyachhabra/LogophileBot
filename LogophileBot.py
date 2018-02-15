@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 ACCESSTOKEN='EAAF5jHKhUdgBAOjfCWUYGrAbZCoZBWPgwjudtXEZBGZAQJCoQgFfQm2Xg9ZAFamlg6YjwEH0IaaaimdW9c5AYeMCCGaGRxPquAT8GGXpJWWuxErabvde495EseEAweFoVB6LUeKzahG3SB0F5zfWEjI5ZAIGE8ZC7xOSpftsNtIZAZBwMrj5XxZC8y'
-VERIFYTOKEN=''
+VERIFYTOKEN='aaruchinu'
 bot = Bot(ACCESSTOKEN)
 
 @app.route('/',methods=['POST'])
