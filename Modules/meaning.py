@@ -14,13 +14,14 @@ def word_meaning(word):
     r = requests.get(url, headers = {'app_id': app_id, 'app_key': app_key})
 
     code=r.status_code
+    if (code == 404):
+        return "The word does not exist"
     r=r.json()
     results=r['results'][0]
     le=results['lexicalEntries'][0]
     entries=le['entries'][0]
     senses=entries['senses'][0]
     definition=senses['definitions']
-    if(code==404):
-        return "The word does not exist"
+
     return definition[0]
 # print(definition)
