@@ -22,5 +22,5 @@ def word_meaning(word):
     definition=senses['definitions']
     if(code==404):
         return "The word does not exist"
-    return definition
+    return definition[0]
 # print(definition)
