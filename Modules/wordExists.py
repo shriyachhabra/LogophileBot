@@ -11,10 +11,10 @@ def word_exists(word):
  r = requests.get(url, headers = {'app_id': app_id, 'app_key': app_key})
  code=r.status_code
  print(code)
-
  if(code==404):
    return "The word does not exist"
 
  return "Great!The word exists.\nYou know the language well."
 # print("text \n" + r.text)
 # print("json \n" + json.dumps(r.json()))
+# print(__name__)

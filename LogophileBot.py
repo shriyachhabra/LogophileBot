@@ -1,6 +1,7 @@
 from flask import Flask,request
 from pymessenger.bot import Bot
 from Modules.wordExists import *
+from Modules.meaning import *
 import os
 app = Flask(__name__)
 
@@ -40,8 +41,10 @@ def handle_mssg(rec_id,msg):
     response_text=''
     if(txt[0]=="hey"):
         response_text="hi"
-    elif(txt[0]=="@WE"):
+    elif(txt[0]=="exists?"):
         response_text=word_exists(txt[1])
+    elif(txt[0]=="meaning?"):
+        response_text=word_meaning(txt[1])
     send_message(rec_id,response_text)
 
     return "handled"
