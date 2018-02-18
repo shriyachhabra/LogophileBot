@@ -3,6 +3,7 @@ from pymessenger.bot import Bot
 from Modules.wordExists import *
 from Modules.meaning import *
 from Modules.synonyms import *
+from Modules.antonyms import *
 import os
 app = Flask(__name__)
 
@@ -42,12 +43,14 @@ def handle_mssg(rec_id,msg):
     response_text=''
     if(txt[0]=="hey"):
         response_text="hi"
-    elif(txt[0]=="exists?"):
+    elif(txt[0]=="exists?"|txt[0]=="ex?"):
         response_text=word_exists(txt[1])
-    elif(txt[0]=="meaning?"):
+    elif(txt[0]=="meaning?"|txt[0]=="mng?"):
         response_text=word_meaning(txt[1])
-    elif(txt[0]=="synonym?"):
+    elif(txt[0]=="synonym?"|txt[0]=="syn?"):
         response_text=synonyms(txt[1])
+    elif(txt[0]=="antonym?"|txt[0]=="ant?"):
+        response_text=antonyms(txt[1])
     else:
         response_text="Be Specific"
     send_message(rec_id,response_text)
