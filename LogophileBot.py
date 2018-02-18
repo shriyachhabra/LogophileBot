@@ -43,13 +43,13 @@ def handle_mssg(rec_id,msg):
     response_text=''
     if(txt[0]=="hey"):
         response_text="hi"
-    elif(txt[0]=="exists?"|txt[0]=="ex?"):
+    elif(txt[0]=="exists?"):
         response_text=word_exists(txt[1])
-    elif(txt[0]=="meaning?"|txt[0]=="mng?"):
+    elif(txt[0]=="meaning?"):
         response_text=word_meaning(txt[1])
-    elif(txt[0]=="synonym?"|txt[0]=="syn?"):
+    elif(txt[0]=="synonym?"):
         response_text=synonyms(txt[1])
-    elif(txt[0]=="antonym?"|txt[0]=="ant?"):
+    elif(txt[0]=="antonym?"):
         response_text=antonyms(txt[1])
     else:
         response_text="Be Specific"
