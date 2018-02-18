@@ -48,6 +48,8 @@ def handle_mssg(rec_id,msg):
         response_text=word_meaning(txt[1])
     elif(txt[0]=="synonym?"):
         response_text=synonyms(txt[1])
+    else:
+        response_text="Be Specific"
     send_message(rec_id,response_text)
 
     return "handled"
