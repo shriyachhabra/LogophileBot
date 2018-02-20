@@ -4,6 +4,7 @@ from Modules.wordExists import *
 from Modules.meaning import *
 from Modules.synonyms import *
 from Modules.antonyms import *
+from Modules.pronunciations import *
 import os
 app = Flask(__name__)
 
@@ -51,6 +52,8 @@ def handle_mssg(rec_id,msg):
         response_text=synonyms(txt[1])
     elif(txt[0]=="antonym?"):
         response_text=antonyms(txt[1])
+    elif(txt[0]=="pron?"):
+        response_text=pronunciation(txt[1])
     else:
         response_text="Be Specific"
     send_message(rec_id,response_text)
