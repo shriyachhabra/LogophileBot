@@ -15,6 +15,8 @@ def synonyms(word):
  code=r.status_code
  if(code==404):
      return "Word does not exist"
+ if(code==500):
+     return "Error whule fetching"
  r=r.json()
  results=r['results'][0]
  le=results['lexicalEntries'][0]
