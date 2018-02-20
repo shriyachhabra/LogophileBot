@@ -44,17 +44,19 @@ def get_mssg():
 def handle_mssg(rec_id,msg):
     txt=msg.split(' ',1)
     response_text=''
-    if(txt[0]=="hey"):
-        response_text="hi"
-    elif(txt[0]=="exists?"):
+    if(txt[0].lower() in ['hey','hi','hello','yo','ssup','yuhu']):
+        response_text=start_Convo
+    elif(txt[0].lower() in ['thanks','thank']):
+        response_text:":D"
+    elif(txt[0]=="ex?"):
         response_text=word_exists(txt[1])
-    elif(txt[0]=="meaning?"):
+    elif(txt[0]=="def?"):
         response_text=word_meaning(txt[1])
-    elif(txt[0]=="synonym?"):
+    elif(txt[0]=="syn?"):
         response_text=synonyms(txt[1])
-    elif(txt[0]=="antonym?"):
+    elif(txt[0]=="ant?"):
         response_text=antonyms(txt[1])
-    elif(txt[0]=="pron?"):
+    elif(txt[0]=="pro?"):
         response_text=pronunciation(txt[1])
     elif(txt[0]=="fact?"):
         response_text=get_facts()
