@@ -9,7 +9,7 @@ from Modules.facts import *
 from Modules.hello import *
 import os
 app = Flask(__name__)
-
+thanks=":D"
 ACCESSTOKEN='EAAF5jHKhUdgBAJ2CAResm3HcnbZC2b0NclRN8K0POynZBklRg2IaieWKd7MUy0KwuRUEofBpc6nVXZBB307xnZBM8UKYUyBPLl56hjZCbupOvmt1RJmXazOXOPZC5vcOWhCOCR89fnbpT9y2beZCkuMH0yRT5dJMSGoha40Fb3RIndGgx4unGtr'
 VERIFYTOKEN='aaruchinu1'
 bot = Bot(ACCESSTOKEN)
@@ -47,7 +47,7 @@ def handle_mssg(rec_id,msg):
     if(txt[0].lower() in ['hey','hi','hello','yo','ssup','yuhu']):
         response_text=start_Convo
     elif(txt[0].lower() in ['thanks','thank']):
-        response_text:":D"
+        response_text:thanks
     elif(txt[0]=="ex?"):
         response_text=word_exists(txt[1])
     elif(txt[0]=="def?"):
