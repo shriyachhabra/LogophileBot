@@ -2,3 +2,4 @@ pymessenger
 flask
 requests
 gunicorn
+beautifulsoup4
