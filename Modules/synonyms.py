@@ -16,19 +16,27 @@ def synonyms(word):
  if(code==404):
      return "Word does not exist"
  if(code==500):
-     return "Error whule fetching"
+     return "Error while fetching"
  r=r.json()
  results=r['results'][0]
  le=results['lexicalEntries'][0]
  entries=le['entries'][0]
  senses=entries['senses'][0]
- subsenses=senses['subsenses'][0]
- synonyms=subsenses['synonyms']
+
+ synonyms=""
  synDic=""
+
+ if('synonyms' in senses):
+    synonyms=senses['synonyms']
+ else:
+  subsenses=senses['subsenses'][0]
+  synonyms=subsenses['synonyms']
+
  for item in synonyms:
-    id=item['id']
-    synDic+=id+"\n"
+  id=item['id']
+  synDic+=id+"\n"
 
-
+ print(synonyms)
  print(synDic)
+
  return synDic
