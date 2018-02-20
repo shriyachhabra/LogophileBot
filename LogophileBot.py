@@ -43,7 +43,7 @@ def get_mssg():
 
 def handle_mssg(rec_id,msg):
     txt=msg.split(' ',1)
-    thanks = "glad to be at your service :D"
+
     response_text=''
     if(txt[0].lower() in ['hey','hi','hello','yo','ssup','yuhu']):
         response_text=start_Convo

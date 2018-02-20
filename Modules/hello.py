@@ -19,3 +19,4 @@ pro? word/phrase:To know the pronunciation of a word
 
 fact? word/phrase:To know some interesting facts about english language                    
 """
+thanks = "glad to be at your service :D"
